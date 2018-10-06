@@ -1,0 +1,42 @@
+
+Task 2
+
+---  Downloaded and installed Ubuntu 18.04 server 
+
+---  Loaded Mysql page in the web brouser, to copy the download link address
+
+---  cd /tmp
+To move to the directory I want to download to
+
+---  curl -OL paste the copied link (https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb)
+This is to download the file to a current directory (templates)
+error message - command curl not found
+
+---  sudo apt install curl
+This to install command curl
+
+---   curl -OL paste the copied link (https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb)
+The file was successfuly downloaded
+
+---  sudo dpkg -i mysql-apt-config*
+This is to add the repositories
+dpkg is used to install, remove, and inspect .deb software packages. The -i flag indicates that we'd like to install from the specified file
+
+---  sudo apt update
+To refresh the apt package cache to make the new software packages available
+
+---  rm mysql-apt-config*
+To clean up and  delete the downloaded file
+
+---  sudo apt install mysql-server
+This is to install Mysql
+
+---  systemctl status mysql
+To confirm that Mysql is installed and running
+
+--- mysql_secure_installation
+This is to make mysql secured
+
+--- mysqladmin -u root -p version
+This enables us to know what version of the MySQL server is running, its uptime, and some other status information
+ 

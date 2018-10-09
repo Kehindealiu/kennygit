@@ -1,0 +1,62 @@
+Installing lamp-server and wordpress on Ubuntu 18.04
+
+---  Downloaded and installed Virtualbox and ubuntu 18.04
+
+---  Ubuntu server cloned 
+
+--- Ran the command sudo apt-get update
+     To update the ubuntu server
+
+---  sudo apt-get install Lamp-server^
+     To install Lamp-server. 
+     Got a message unable to lock the administration directory /val/lib/dpkg/
+
+--- sudo dpkg --configure -a 
+    Then this command was executed to correct the problem
+
+---The command sudo apt-get update was executed again to update the repository
+
+---  apt-get install Lamp-server^
+     Executed to install lamp-server
+
+---  sudo mysql -u root -p
+   to instal mysql
+
+---Executed the following commands to create the database, user, password etc,
+   CREATE DATABASE wordpress;
+   CREATE USER wordpressuser@localhost IDENTIFIED BY 'wordpresspassword';
+   GRANT ALL PRIVILEGES ON wordpressdb.* TO wordpressuser@localhost;
+   FLUSH PRIVILEGES;
+   exit
+
+Installed wordpress using the following commands
+---  cd /tmp
+     temporary file
+
+---  wget http://wordpress.org/latest.zip
+     To download the latest wordpress
+
+---  sudo unzip -q latest.zip -d /var/www/html
+     unzip the file
+
+---  sudo chown -R www-data:www-data /var/www/html/wordpress/
+
+---  sudo chmod -R 755 /var/wwww/html/wordpress/
+
+---  sudo mkdir -p /var/www/html/wordpress/wp-content/uploads
+
+---  sudo chown -R www-data:www-data /var/www/html/wordpress/wp-content/uploads
+
+---  Executed the command sudo ifconfig
+     To check the IP address
+     Error message "ifconfig not found but can be installed with:sudo apt install net-tools"
+
+---  Executed command sudo apt install net-tools
+     to installifconfig 
+
+---  ifconfig
+     IP address checked and copied
+
+---  IP Address copied and pasted into the opened webpage
+     The database name, username and password are entered into the space provided
+     The install is run.

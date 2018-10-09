@@ -59,4 +59,4 @@ Installed wordpress using the following commands
 
 ---  IP Address copied and pasted into the opened webpage
      The database name, username and password are entered into the space provided
-     The install is run.
+     The install is run to complete the installation of wordpress.

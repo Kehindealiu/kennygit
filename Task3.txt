@@ -4,7 +4,7 @@ Installing lamp-server and wordpress on Ubuntu 18.04
 
 ---  Ubuntu server cloned 
 
---- Executed the command sudo apt-get update
+--- executed the command sudo apt-get update
      To update the ubuntu server
 
 ---  sudo apt-get install Lamp-server^
